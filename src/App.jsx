@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { MdDelete } from "react-icons/md";
 import { MdEditSquare } from "react-icons/md";
+import { appcontext } from './Context';
 
 function App() {
+  let { inp , setinp } = useContext(appcontext)
   return (
     <div>
       <h1 className='w-full cursor-context-menu text-center text-black font-bold text-2xl mt-5 tracking-[2px]'>Own Task</h1>
 
       <div className='w-[90%] h-[40px] mt-5 mx-auto flex justify-center items-center gap-4'>
-        <input className='w-[80%] h-full px-4 text-lg bg-gray-100 text-black rounded-lg' type="text" />
+        <input className='w-[80%] h-full px-4 text-lg bg-gray-100 text-black rounded-lg' type="text" 
+          value={inp}
+        />
         <button className='py-1 px-3 bg-black text-white rounded-lg cursor-pointer h-full font-bold'>Add_Manager</button>
       </div>
 
