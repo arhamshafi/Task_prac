@@ -1,1 +1,22 @@
 @import "tailwindcss";
+.scrolldiv {
+  overflow-y: scroll; /* or overflow: auto; */
+}
+
+/* Webkit Scrollbar Customization */
+.scrolldiv::-webkit-scrollbar {
+  width: 1px;
+}
+
+.scrolldiv::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+.scrolldiv::-webkit-scrollbar-thumb {
+  background-color: transparent;  /* Thumb color */
+  border-radius: 10px;
+}
+
+.scrolldiv::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
